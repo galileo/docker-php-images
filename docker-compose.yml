@@ -1,24 +1,38 @@
 version: '2'
 services:
-  
+
+  # SIMPLE php instantion for simple cases
   php-5.6:
     build:
-      context: ./dockerfiles/php/5.6
+      context: ./dockerfiles/php/plain/5.6
       dockerfile: Dockerfile
     image: galileo/php:5.6
   
   php-5.6-phpunit-5:
     build:
-      context: ./dockerfiles/php/5.6-phpunit-5
+      context: ./dockerfiles/php/plain/5.6-phpunit-5
     image: galileo/php:5.6-phpunit-5
 
   php-5.6-phpunit-4:
     build:
-      context: ./dockerfiles/php/5.6-phpunit-4
+      context: ./dockerfiles/php/plain/5.6-phpunit-4
     image: galileo/php:5.6-phpunit-4
 
-  php-5.6-phpstorm-5:
+  # SYMFONY - all things polished for plain symfony project
+
+  # ADVANCED - most packages installed to develop in friendly way, currently used with eZ Platform
+  php-5.6-advanced:
     build:
-      context: ./dockerfiles/php/5.6-phpstorm-5/
+      context: ./dockerfiles/php/advanced/5.6
       dockerfile: Dockerfile
-    image: galileo/php:5.6-phpstorm-5
+    image: galileo/php:5.6-advanced
+
+  php-5.6-phpunit-5-advanced:
+    build:
+      context: ./dockerfiles/php/advanced/5.6-phpunit-5
+    image: galileo/php:5.6-phpunit-5-advanced
+#
+  php-5.6-phpunit-4-advanced:
+    build:
+      context: ./dockerfiles/php/advanced/5.6-phpunit-4
+    image: galileo/php:5.6-phpunit-4-advanced

@@ -1,6 +1,5 @@
 FROM galileo/php:5.6
 
-ENV COMPOSER_BIN_DIR="/usr/local/bin"
-ENV COMPOSER_ALLOW_SUPERUSER="true"
+MAINTAINER Kamil Ronewicz <galileox86@gmail.com>
 
 RUN composer global require "phpunit/phpunit=4.*" --prefer-dist
