@@ -1,0 +1,24 @@
+version: '2'
+services:
+  
+  php-5.6:
+    build:
+      context: ./dockerfiles/php/5.6
+      dockerfile: Dockerfile
+    image: galileo/php:5.6
+  
+  php-5.6-phpunit-5:
+    build:
+      context: ./dockerfiles/php/5.6-phpunit-5
+    image: galileo/php:5.6-phpunit-5
+
+  php-5.6-phpunit-4:
+    build:
+      context: ./dockerfiles/php/5.6-phpunit-4
+    image: galileo/php:5.6-phpunit-4
+
+  php-5.6-phpstorm-5:
+    build:
+      context: ./dockerfiles/php/5.6-phpstorm-5/
+      dockerfile: Dockerfile
+    image: galileo/php:5.6-phpstorm-5
