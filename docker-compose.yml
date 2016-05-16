@@ -20,6 +20,18 @@ services:
 
   # SYMFONY - all things polished for plain symfony project
 
+  # APACHE
+
+  php-5.6-apache-plain:
+    build:
+      context: ./dockerfiles/php/apache/5.6-plain
+    image: galileo/php:5.6-apache-plain
+
+  php-5.6-apache-advanced:
+    build:
+      context: ./dockerfiles/php/apache/5.6-advanced
+    image: galileo/php:5.6-apache-advanced
+
   # ADVANCED - most packages installed to develop in friendly way, currently used with eZ Platform
   php-5.6-advanced:
     build:
