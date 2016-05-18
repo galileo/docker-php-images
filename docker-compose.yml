@@ -1,65 +1,64 @@
 version: '2'
 services:
 
-  # SIMPLE php instantion for simple cases
-  php-5.6:
+# APACHE
+  php-5.6-apache:
     build:
-      context: ./dockerfiles/php/plain/5.6
-      dockerfile: Dockerfile
-    image: galileo/php:5.6
-  
-  php-5.6-phpunit-5:
-    build:
-      context: ./dockerfiles/php/plain/5.6-phpunit-5
-    image: galileo/php:5.6-phpunit-5
-
-  php-5.6-phpunit-4:
-    build:
-      context: ./dockerfiles/php/plain/5.6-phpunit-4
-    image: galileo/php:5.6-phpunit-4
-
-  # SYMFONY - all things polished for plain symfony project
-
-  # APACHE
-
-  php-5.6-apache-plain:
-    build:
-      context: ./dockerfiles/php/apache/5.6-plain
-    image: galileo/php:5.6-apache-plain
+      context: ./dockerfiles/php/apache/5.6
+    image: galileo/php:5.6-apache
 
   php-5.6-apache-advanced:
     build:
       context: ./dockerfiles/php/apache/5.6-advanced
     image: galileo/php:5.6-apache-advanced
 
-  # ADVANCED - most packages installed to develop in friendly way, currently used with eZ Platform
+  php-5.6-apache-advanced-xdebug:
+    build:
+      context: ./dockerfiles/php/apache/5.6-advanced-xdebug
+    image: galileo/php:5.6-apache-advanced-xdebug
+
+# SIMPLE php instantion for simple cases
+  php-5.6:
+    build:
+      context: ./dockerfiles/php/cli/5.6
+    image: galileo/php:5.6
+
+  php-5.6-phpunit-4:
+    build:
+      context: ./dockerfiles/php/cli/5.6-phpunit-4
+    image: galileo/php:5.6-phpunit-4
+
+  php-5.6-phpunit-5:
+    build:
+      context: ./dockerfiles/php/cli/5.6-phpunit-5
+    image: galileo/php:5.6-phpunit-5
+
+# ADVANCED - most packages installed to develop in friendly way, currently used with eZ Platform
   php-5.6-advanced:
     build:
-      context: ./dockerfiles/php/advanced/5.6
-      dockerfile: Dockerfile
+      context: ./dockerfiles/php/cli/5.6-advanced
     image: galileo/php:5.6-advanced
 
-  php-5.6-phpunit-5-advanced:
+  php-5.6-advanced-phpunit-4:
     build:
-      context: ./dockerfiles/php/advanced/5.6-phpunit-5
-    image: galileo/php:5.6-phpunit-5-advanced
-#
-  php-5.6-phpunit-4-advanced:
-    build:
-      context: ./dockerfiles/php/advanced/5.6-phpunit-4
-    image: galileo/php:5.6-phpunit-4-advanced
+      context: ./dockerfiles/php/cli/5.6-advanced-phpunit-4
+    image: galileo/php:5.6-advanced-phpunit-4
 
-  php-5.6-xdebug-phpunit-4-advanced:
+  php-5.6-advanced-phpunit-5:
     build:
-      context: ./dockerfiles/php/xdebug/5.6-phpunit-4-advanced
-    image: galileo/php:5.6-xdebug-phpunit-4-advanced
+      context: ./dockerfiles/php/cli/5.6-advanced-phpunit-5
+    image: galileo/php:5.6-advanced-phpunit-5
 
-  php-5.6-xdebug-phpunit-5-advanced:
-      build:
-        context: ./dockerfiles/php/xdebug/5.6-phpunit-5-advanced
-      image: galileo/php:5.6-xdebug-phpunit-5-advanced
-
-  php-5.6-xdebug-apache-advanced:
+  php-5.6-advanced-phpunit-4-xdebug:
     build:
-      context: ./dockerfiles/php/xdebug/5.6-apache-advanced
-    image: galileo/php:5.6-xdebug-apache-advanced
+      context: ./dockerfiles/php/cli/5.6-advanced-phpunit-4-xdebug
+    image: galileo/php:5.6-advanced-phpunit-4-xdebug
+
+  php-5.6-advanced-phpunit-5-xdebug:
+    build:
+      context: ./dockerfiles/php/cli/5.6-advanced-phpunit-5-xdebug
+    image: galileo/php:5.6-advanced-phpunit-5-xdebug
+
+# SYMFONY - all things polished for plain symfony project
+
+# TBD

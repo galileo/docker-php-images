@@ -1,5 +1,5 @@
-FROM galileo/php:5.6-apache
-LABEL version='5.6-apache-advanced'
+FROM galileo/php:5.6
+LABEL version='5.6-advanced'
 MAINTAINER Kamil Ronewicz <galileox86@gmail.com>
 
 # Install mcrypc
