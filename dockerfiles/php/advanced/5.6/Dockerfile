@@ -31,6 +31,8 @@ RUN docker-php-ext-install \
   mysqli \
   pdo_mysql
 
+RUN docker-php-ext-install exif
+
 #  opcache \
 #  sockets \
 #  xmlrpc \

@@ -48,3 +48,18 @@ services:
     build:
       context: ./dockerfiles/php/advanced/5.6-phpunit-4
     image: galileo/php:5.6-phpunit-4-advanced
+
+  php-5.6-xdebug-phpunit-4-advanced:
+    build:
+      context: ./dockerfiles/php/xdebug/5.6-phpunit-4-advanced
+    image: galileo/php:5.6-xdebug-phpunit-4-advanced
+
+  php-5.6-xdebug-phpunit-5-advanced:
+      build:
+        context: ./dockerfiles/php/xdebug/5.6-phpunit-5-advanced
+      image: galileo/php:5.6-xdebug-phpunit-5-advanced
+
+  php-5.6-xdebug-apache-advanced:
+    build:
+      context: ./dockerfiles/php/xdebug/5.6-apache-advanced
+    image: galileo/php:5.6-xdebug-apache-advanced

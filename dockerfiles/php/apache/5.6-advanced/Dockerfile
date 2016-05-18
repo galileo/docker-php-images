@@ -30,3 +30,5 @@ RUN docker-php-ext-install \
   mysql \
   mysqli \
   pdo_mysql
+
+RUN docker-php-ext-install exif
