@@ -17,6 +17,8 @@ services:
       context: ./dockerfiles/php/apache/5.6-advanced-xdebug
     image: galileo/php:5.6-apache-advanced-xdebug
 
+# SYMFONY - all things polished for plain symfony project
+
 # SIMPLE php instantion for simple cases
   php-5.6:
     build:
@@ -32,6 +34,16 @@ services:
     build:
       context: ./dockerfiles/php/cli/5.6-phpunit-5
     image: galileo/php:5.6-phpunit-5
+
+  php-7.0:
+    build:
+      context: ./dockerfiles/php/cli/7.0
+    image: galileo/php:7.0
+
+  php-7.0-phpunit-4:
+    build:
+      context: ./dockerfiles/php/cli/7.0-phpunit-4
+    image: galileo/php:7.0-phpunit-4
 
 # ADVANCED - most packages installed to develop in friendly way, currently used with eZ Platform
   php-5.6-advanced:
@@ -59,6 +71,19 @@ services:
       context: ./dockerfiles/php/cli/5.6-advanced-phpunit-5-xdebug
     image: galileo/php:5.6-advanced-phpunit-5-xdebug
 
-# SYMFONY - all things polished for plain symfony project
+  php-7.0-advanced:
+    build:
+      context: ./dockerfiles/php/cli/7.0-advanced
+    image: galileo/php:7.0-advanced
 
-# TBD
+  php-7.0-advanced-phpunit-4:
+    build:
+      context: ./dockerfiles/php/cli/7.0-advanced-phpunit-4
+    image: galileo/php:7.0-advanced-phpunit-4
+
+  php-7.0-advanced-phpunit-4-xdebug:
+    build:
+      context: ./dockerfiles/php/cli/7.0-advanced-phpunit-4-xdebug
+    image: galileo/php:7.0-advanced-phpunit-4-xdebug
+
+# SYMFONY - all things polished for plain symfony project
