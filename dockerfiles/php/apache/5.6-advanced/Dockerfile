@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y \
         exif \
         mysql \
         mysqli \
+        mbstring \
         pdo_mysql
 
 RUN apt-get purge -y libxslt1-dev
